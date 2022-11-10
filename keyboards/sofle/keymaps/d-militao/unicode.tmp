@@ -1,0 +1,75 @@
+
+enum unicode_names {
+    A_LC_ACUT,
+    A_LC_GRAV,
+    A_LC_CIRC,
+    A_LC_TILD,
+    E_LC_ACUT,
+    E_LC_CIRC,
+    I_LC_ACUT,
+    O_LC_ACUT,
+    O_LC_CIRC,
+    O_LC_TILD,
+    U_LC_ACUT,
+    C_LC_CEIL,
+    A_UC_ACUT,
+    A_UC_GRAV,
+    A_UC_CIRC,
+    A_UC_TILD,
+    E_UC_ACUT,
+    E_UC_CIRC,
+    I_UC_ACUT,
+    O_UC_ACUT,
+    O_UC_CIRC,
+    O_UC_TILD,
+    U_UC_ACUT,
+    C_UC_CEIL,
+    ORD_IND_MAS,
+    ORD_IND_FEM,
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+    [A_LC_ACUT]   = 0x00E1,  // á
+    [A_LC_GRAV]   = 0x00E0,  // à
+    [A_LC_CIRC]   = 0x00E2,  // â
+    [A_LC_TILD]   = 0x00E3,  // ã
+    [E_LC_ACUT]   = 0x00E9,  // é
+    [E_LC_CIRC]   = 0x00EA,  // ê
+    [I_LC_ACUT]   = 0x00ED,  // í
+    [O_LC_ACUT]   = 0x00F3,  // ó
+    [O_LC_CIRC]   = 0x00F4,  // ô
+    [O_LC_TILD]   = 0x00F5,  // õ
+    [U_LC_ACUT]   = 0x00FA,  // ú
+    [C_LC_CEIL]   = 0x00E7,  // ç
+    [A_UC_ACUT]   = 0x00C1,  // Á
+    [A_UC_GRAV]   = 0x00C0,  // À
+    [A_UC_CIRC]   = 0x00C2,  // Â
+    [A_UC_TILD]   = 0x00C3,  // Ã
+    [E_UC_ACUT]   = 0x00C9,  // É
+    [E_UC_CIRC]   = 0x00CA,  // Ê
+    [I_UC_ACUT]   = 0x00CD,  // Í
+    [O_UC_ACUT]   = 0x00D3,  // Ó
+    [O_UC_CIRC]   = 0x00D4,  // Ô
+    [O_UC_TILD]   = 0x00D5,  // Õ
+    [U_UC_ACUT]   = 0x00DA,  // Ú
+    [C_UC_CEIL]   = 0x00C7,  // Ç
+    [ORD_IND_MAS] = 0x00BA,  // º
+    [ORD_IND_FEM] = 0x00AA,  // ª
+};
+
+enum custom_keycodes {
+    KC_A_ACUT,
+    KC_A_GRAV,
+    KC_A_CIRC,
+    KC_A_TILD,
+    KC_E_ACUT,
+    KC_E_CIRC,
+    KC_I_ACUT,
+    KC_O_ACUT,
+    KC_O_CIRC,
+    KC_O_TILD,
+    KC_U_ACUT,
+    KC_C_CEIL,
+    KC_ORD_IND_MAS,
+    KC_ORD_IND_FEM,
+};
