@@ -27,5 +27,15 @@
     "python.formatting.provider": "yapf",
     "[json]": {
 	    "editor.formatOnSave": false
-    }
+    },
+    "favorites.resources": [
+        {
+            "filePath": "keyboards/sofle",
+            "group": "Default"
+        },
+        {
+            "filePath": "users/d-militao",
+            "group": "Default"
+        }
+    ]
 }
