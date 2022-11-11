@@ -7,10 +7,12 @@
 
 #define KC_DESKTOP_RIGHT C(G(KC_RIGHT))
 #define KC_DESKTOP_LEFT C(G(KC_LEFT))
-#define KC_DESKTOP_NEW C(G(KC_D))
-#define KC_TASK_VIEW G(KC_TAB)
-#define KC_DESKTOP_PIN_APP C(S(G(KC_A)))
-#define KC_DESKTOP_PIN_WINDOW C(S(G(KC_Q)))
+#define KC_MISSION_CTRL C(G(KC_UP))
+#define KC_TASK_VIEW C(G(KC_DOWN))
+#define KC_NOTIFICATION_CENTER C(A(G(KC_RIGHT)))
+#define KC_SHOW_DESKTOP C(A(G(KC_DOWN)))
+// #define KC_DESKTOP_PIN_APP C(S(G(KC_A)))
+// #define KC_DESKTOP_PIN_WINDOW C(S(G(KC_Q)))
 
 #define KC_WORD_RIGHT C(KC_RIGHT)
 #define KC_WORD_LEFT C(KC_LEFT)
@@ -83,18 +85,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [BASE] = LAYOUT( \
-  KC_GRV,  KC_1,         KC_2,         KC_3,         KC_4,         KC_5,                       KC_6, KC_7,         KC_8,         KC_9,         KC_0,            KC_EQL, \
-  KC_GRV,  KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,                       KC_Y, KC_U,         KC_I,         KC_O,         KC_P,            KC_BSLS, \
-  KC_TILD, LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), C_S_T(KC_G),                KC_H, RSFT_T(KC_J), RCTL_T(KC_K), RALT_T(KC_L), RGUI_T(KC_QUOT), KC_SCLN, \
-  KC_EQL,  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B, KC_MPLY,     KC_MUTE, KC_N, KC_M,         KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS, \
+  KC_GRV,  KC_1,         KC_2,         KC_3,         KC_4,         KC_5,                KC_6, KC_7,         KC_8,         KC_9,         KC_0,            KC_EQL, \
+  KC_GRV,  KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,                KC_Y, KC_U,         KC_I,         KC_O,         KC_P,            KC_BSLS, \
+  KC_TILD, LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G,                KC_H, RSFT_T(KC_J), RCTL_T(KC_K), RALT_T(KC_L), RGUI_T(KC_QUOT), KC_SCLN, \
+  KC_EQL,  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B, KC_MPLY,     KC_MUTE, KC_N, KC_M,  KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS, \
            TG(GAME), MO(PT), LT(SHORT, KC_ESC), LT(MOU, KC_TAB), LT(NAV, KC_SPC),     LT(SYM, KC_ENT), LT(NUM, KC_BSPC), LT(FN, KC_DEL), KC_DESKTOP_LEFT, KC_DESKTOP_RIGHT \
-),
-[PT] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-                        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 ),
 [GAME] = LAYOUT( \
   KC_GRV,  KC_1, KC_2, KC_3, KC_4, KC_5,                            KC_6, KC_7, KC_8,    KC_9,   KC_0,    KC_EQL, \
@@ -125,17 +120,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_BTN1, KC_BTN2, KC_NO, KC_NO, KC_NO \
 ),
 [SHORT] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_NO,                 KC_NO,          KC_NO,              KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_DESKTOP_PIN_WINDOW, KC_DESKTOP_NEW, KC_DESKTOP_PIN_APP, KC_NO, KC_NO, \
-  KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_NO, KC_DESKTOP_LEFT,       KC_TASK_VIEW,   KC_DESKTOP_RIGHT,   KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,                 KC_NO,          KC_NO,            KC_NO, KC_NO, \
+  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO, \
+  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_SHOW_DESKTOP, KC_MISSION_CTRL, KC_NOTIFICATION_CENTER, KC_NO, KC_NO, \
+  KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_NO, KC_DESKTOP_LEFT, KC_TASK_VIEW,    KC_DESKTOP_RIGHT,       KC_NO, KC_NO, \
+  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO, \
                         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 ),
 [NUM] = LAYOUT( \
   KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,                        KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_PAST, KC_7,  KC_8,  KC_9,  KC_PMNS,                      KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_0,    KC_4,  KC_5,  KC_6,  KC_PPLS,                      KC_NO,  KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
-  KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL,  KC_NO,        KC_NO, KC_NO,  KC_NO,   KC_DOT,  KC_COMM, KC_NO,   KC_NO, \
+  KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL,  KC_NO,        KC_NO, KC_NO,  KC_NO,   KC_COMM, KC_DOT,  KC_NO,   KC_NO, \
                   KC_NO, KC_NO, KC_COMM, KC_DOT, KC_0,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 ),
 [SYM] = LAYOUT( \
