@@ -124,28 +124,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_SHOW_DESKTOP, KC_MISSION_CTRL, KC_NOTIFICATION_CENTER, KC_NO, KC_NO, \
   KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_NO, KC_DESKTOP_LEFT, KC_TASK_VIEW,    KC_DESKTOP_RIGHT,       KC_NO, KC_NO, \
   KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO, \
-                        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+                  KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
 ),
 [NUM] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,                        KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_PAST, KC_7,  KC_8,  KC_9,  KC_PMNS,                      KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_0,    KC_4,  KC_5,  KC_6,  KC_PPLS,                      KC_NO,  KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
-  KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL,  KC_NO,        KC_NO, KC_NO,  KC_NO,   KC_COMM, KC_DOT,  KC_NO,   KC_NO, \
-                  KC_NO, KC_NO, KC_COMM, KC_DOT, KC_0,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+               KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,                        KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
+               KC_NO, KC_PAST, KC_7,  KC_8,  KC_9,  KC_PMNS,                      KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
+               KC_NO, KC_0,    KC_4,  KC_5,  KC_6,  KC_PPLS,                      KC_NO,  KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
+               KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL,  KC_NO,        KC_NO, KC_NO,  KC_NO,   KC_COMM, KC_DOT,  KC_NO,   KC_NO, \
+  KC_NO, KC_NO, LT(SHORT, KC_COMM), LT(MOU, KC_DOT), LT(NAV, KC_0),        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
 ),
 [SYM] = LAYOUT( \
   KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                        KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_LCBR, KC_AMPR, KC_ASTR, KC_PIPE, KC_RCBR,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_LPRN, KC_DLR,  KC_PERC, KC_CIRC, KC_RPRN,                      KC_NO, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
   KC_NO, KC_LBRC, KC_EXLM, KC_AT,   KC_HASH, KC_RBRC, KC_NO,        KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-                          KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+                    KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
 ),
 [FN] = LAYOUT( \
   KC_NO, KC_NO,  KC_NO, KC_NO, KC_NO, KC_NO,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_F12, KC_F7, KC_F8, KC_F9, KC_NO,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
   KC_NO, KC_F11, KC_F4, KC_F5, KC_F6, KC_PSCR,                    KC_NO, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
   KC_NO, KC_F10, KC_F1, KC_F2, KC_F3, KC_NO,   KC_NO,        KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-                   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+             KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
 )
 };
 
