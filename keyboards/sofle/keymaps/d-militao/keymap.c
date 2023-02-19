@@ -3,41 +3,10 @@
 #ifdef CONSOLE_ENABLE
 #include "print.h"
 #endif
-// #include "d-militao.h"
 
-#define KC_DESKTOP_RIGHT C(G(KC_RIGHT))
-#define KC_DESKTOP_LEFT C(G(KC_LEFT))
-#define KC_MISSION_CTRL C(G(KC_UP))
-#define KC_TASK_VIEW C(G(KC_DOWN))
-#define KC_NOTIFICATION_CENTER C(A(G(KC_RIGHT)))
-#define KC_SHOW_DESKTOP C(A(G(KC_DOWN)))
-// #define KC_DESKTOP_PIN_APP C(S(G(KC_A)))
-// #define KC_DESKTOP_PIN_WINDOW C(S(G(KC_Q)))
+#include "d-militao.h"
 
-#define KC_WORD_RIGHT C(KC_RIGHT)
-#define KC_WORD_LEFT C(KC_LEFT)
-
-#define KC_TAB_NEXT C(KC_TAB)
-#define KC_TAB_PREV C(S(KC_TAB))
-
-#define U_RDO C(KC_Y)
-#define U_PST C(KC_V)
-#define U_CPY C(KC_C)
-#define U_CUT C(KC_X)
-#define U_UND C(KC_Z)
-
-enum sofle_layers {
-    BASE,
-    PT,
-    GAME,
-    GAME_SHIFT,
-    NAV,
-    MOU,
-    SHORT,
-    NUM,
-    SYM,
-    FN
-};
+#define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -56,114 +25,63 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
-[BASE] = LAYOUT( \
-  KC_GRV,  KC_1,         KC_2,         KC_3,         KC_4,         KC_5,                KC_6, KC_7,         KC_8,         KC_9,         KC_0,            KC_EQL, \
-  KC_GRV,  KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,                KC_Y, KC_U,         KC_I,         KC_O,         KC_P,            KC_BSLS, \
-  KC_TILD, LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G,                KC_H, RSFT_T(KC_J), RCTL_T(KC_K), RALT_T(KC_L), RGUI_T(KC_QUOT), KC_SCLN, \
-  KC_EQL,  KC_Z,         KC_X,         KC_C,         KC_V,         KC_B, KC_MPLY,     KC_MUTE, KC_N, KC_M,  KC_COMM,      KC_DOT,       KC_SLSH,         KC_MINS, \
-           TG(GAME), MO(PT), LT(SHORT, KC_ESC), LT(MOU, KC_TAB), LT(NAV, KC_SPC),     LT(SYM, KC_ENT), LT(NUM, KC_BSPC), LT(FN, KC_DEL), KC_DESKTOP_LEFT, KC_DESKTOP_RIGHT \
-),
-[GAME] = LAYOUT( \
-  KC_GRV,  KC_1, KC_2, KC_3, KC_4, KC_5,                            KC_6, KC_7, KC_8,    KC_9,   KC_0,    KC_EQL, \
-  KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T,                            KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_BSLS, \
-  KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G,                            KC_H, KC_J, KC_K,    KC_L,   KC_QUOT, KC_SCLN, \
-  KC_LCTL, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_MPLY,      KC_MUTE, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS, \
-  TG(GAME), KC_LALT, KC_TAB, KC_SPC, LT(NAV, KC_ESC),      LT(SYM, KC_ENT), LT(NUM, KC_BSPC), LT(FN, KC_DEL), KC_DESKTOP_LEFT, KC_DESKTOP_RIGHT \
-),
-[GAME_SHIFT] = LAYOUT( \
-  KC_GRV,  KC_1, KC_2, KC_3, KC_4, KC_5,                                  KC_6, KC_7, KC_8,    KC_9,   KC_0,    KC_EQL, \
-  KC_T, KC_TAB,  KC_Q, KC_W, KC_E, KC_R,                                  KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_BSLS, \
-  KC_G, KC_LSFT, KC_A, KC_S, KC_D, KC_F,                                  KC_H, KC_J, KC_K,    KC_L,   KC_QUOT, KC_SCLN, \
-  KC_B, KC_LCTL, KC_Z, KC_X, KC_C, KC_V,    KC_MPLY,             KC_MUTE, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS, \
-  TG(GAME_SHIFT), KC_LALT, LT(NAV, KC_ESC), KC_TAB, KC_SPC,      LT(SYM, KC_ENT), LT(NUM, KC_BSPC), LT(FN, KC_DEL), KC_DESKTOP_LEFT, KC_DESKTOP_RIGHT \
-),
-[NAV] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,                      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,                      KC_INS,  KC_HOME, KC_UP,   KC_END,  KC_PGUP,  KC_NO, \
-  KC_NO, KC_LGUI, KC_LALT, KC_LCTL,  KC_LSFT, KC_NO,                      KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO, \
-  KC_NO, U_UND,   U_CUT,   U_CPY,    U_PST,   U_RDO, KC_NO,        KC_NO, U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,   KC_NO, \
-                         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
-),
-[MOU] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_VOLU, KC_WBAK, KC_MS_U, KC_WFWD, KC_WH_U, KC_NO, \
-  KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_MPRV, KC_MPLY, KC_MNXT, KC_BRID, KC_BRIU, KC_NO, \
-                        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,        KC_BTN1, KC_BTN2, KC_NO, KC_NO, KC_NO \
-),
-[SHORT] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      KC_NO, KC_SHOW_DESKTOP, KC_MISSION_CTRL, KC_NOTIFICATION_CENTER, KC_NO, KC_NO, \
-  KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,                      KC_NO, KC_DESKTOP_LEFT, KC_TASK_VIEW,    KC_DESKTOP_RIGHT,       KC_NO, KC_NO, \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO, \
-                  KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
-),
-[NUM] = LAYOUT( \
-               KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,                        KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-               KC_NO, KC_PAST, KC_7,  KC_8,  KC_9,  KC_PMNS,                      KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-               KC_NO, KC_0,    KC_4,  KC_5,  KC_6,  KC_PPLS,                      KC_NO,  KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
-               KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL,  KC_NO,        KC_NO, KC_NO,  KC_NO,   KC_COMM, KC_DOT,  KC_NO,   KC_NO, \
-  KC_NO, KC_NO, LT(SHORT, KC_COMM), LT(MOU, KC_DOT), LT(NAV, KC_0),        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
-),
-[SYM] = LAYOUT( \
-  KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                        KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_LCBR, KC_AMPR, KC_ASTR, KC_PIPE, KC_RCBR,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_LPRN, KC_DLR,  KC_PERC, KC_CIRC, KC_RPRN,                      KC_NO, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
-  KC_NO, KC_LBRC, KC_EXLM, KC_AT,   KC_HASH, KC_RBRC, KC_NO,        KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-                    KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
-),
-[FN] = LAYOUT( \
-  KC_NO, KC_NO,  KC_NO, KC_NO, KC_NO, KC_NO,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_F12, KC_F7, KC_F8, KC_F9, KC_NO,                      KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-  KC_NO, KC_F11, KC_F4, KC_F5, KC_F6, KC_PSCR,                    KC_NO, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, \
-  KC_NO, KC_F10, KC_F1, KC_F2, KC_F3, KC_NO,   KC_NO,        KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, \
-             KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO \
-)
+    [BASE] = LAYOUT_wrapper(
+                           _____QWERTY_L5_____,                      _____QWERTY_R5_____,
+                           _____QWERTY_L4_____,                      _____QWERTY_R4_____,
+                           _____QWERTY_L3_____,                      _____QWERTY_R3_____,
+                           _____QWERTY_L2_____, KC_MPLY,    KC_MUTE, _____QWERTY_R2_____,
+        TG(GAME), KC_LALT, _____QWERTY_L1_____,                      _____QWERTY_R1_____, KC_DESKTOP_LEFT, KC_DESKTOP_RIGHT
+    ),
+    [GAME] = LAYOUT_wrapper(
+                          _____GAME_L5_____,                      _____GAME_R5_____,
+                          _____GAME_L4_____,                      _____GAME_R4_____,
+                          _____GAME_L3_____,                      _____GAME_R3_____,
+                          _____GAME_L2_____, KC_MPLY,    KC_MUTE, _____GAME_R2_____,
+        KC_TRNS, KC_TRNS, _____GAME_L1_____,                      _____GAME_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [NAV] = LAYOUT_wrapper(
+                          _____NAV_L5_____,                      _____NAV_R5_____,
+                          _____NAV_L4_____,                      _____NAV_R4_____,
+                          _____NAV_L3_____,                      _____NAV_R3_____,
+                          _____NAV_L2_____, KC_TRNS,    KC_TRNS, _____NAV_R2_____,
+        KC_TRNS, KC_TRNS, _____NAV_L1_____,                      _____NAV_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [MOU] = LAYOUT_wrapper(
+                          _____MOU_L5_____,                      _____MOU_R5_____,
+                          _____MOU_L4_____,                      _____MOU_R4_____,
+                          _____MOU_L3_____,                      _____MOU_R3_____,
+                          _____MOU_L2_____, KC_TRNS,    KC_TRNS, _____MOU_R2_____,
+        KC_TRNS, KC_TRNS, _____MOU_L1_____,                      _____MOU_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [SHORT] = LAYOUT_wrapper(
+                          _____SHORT_L5_____,                      _____SHORT_R5_____,
+                          _____SHORT_L4_____,                      _____SHORT_R4_____,
+                          _____SHORT_L3_____,                      _____SHORT_R3_____,
+                          _____SHORT_L2_____, KC_TRNS,    KC_TRNS, _____SHORT_R2_____,
+        KC_TRNS, KC_TRNS, _____SHORT_L1_____,                      _____SHORT_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [NUM] = LAYOUT_wrapper(
+                          _____NUM_L5_____,                      _____NUM_R5_____,
+                          _____NUM_L4_____,                      _____NUM_R4_____,
+                          _____NUM_L3_____,                      _____NUM_R3_____,
+                          _____NUM_L2_____, KC_TRNS,    KC_TRNS, _____NUM_R2_____,
+        KC_TRNS, KC_TRNS, _____NUM_L1_____,                      _____NUM_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [SYM] = LAYOUT_wrapper( \
+                          _____SYM_L5_____,                      _____SYM_R5_____,
+                          _____SYM_L4_____,                      _____SYM_R4_____,
+                          _____SYM_L3_____,                      _____SYM_R3_____,
+                          _____SYM_L2_____, KC_TRNS,    KC_TRNS, _____SYM_R2_____,
+        KC_TRNS, KC_TRNS, _____SYM_L1_____,                      _____SYM_R1_____, KC_TRNS, KC_TRNS
+    ),
+    [FN] = LAYOUT_wrapper( \
+                          _____FN_L5_____,                      _____FN_R5_____,
+                          _____FN_L4_____,                      _____FN_R4_____,
+                          _____FN_L3_____,                      _____FN_R3_____,
+                          _____FN_L2_____, KC_TRNS,    KC_TRNS, _____FN_R2_____,
+        KC_TRNS, KC_TRNS, _____FN_L1_____,                      _____FN_R1_____, KC_TRNS, KC_TRNS
+    )
 };
-
-// const key_override_t comma_key_override = ko_make_with_layers_negmods_and_options(
-//     MOD_MASK_SHIFT, // Trigger modifier: shift
-//     KC_COMM, // Trigger key: comma
-//     KC_SCLN, // Repldacement key: semicolon
-//     ~0, // Activate on all layers
-//     MOD_MASK_CAG, // Do not activate when ctrl, alt, or gui are pressed
-//     ko_option_no_reregister_trigger // Specifies that the comma key is not registered again after lifting ctrl
-// );
-
-// const key_override_t dot_key_override = ko_make_with_layers_negmods_and_options(
-//     MOD_MASK_SHIFT, // Trigger modifier: shift
-//     KC_DOT, // Trigger key: comma
-//     S(KC_SCLN), // Replacement key: shifted semicolon
-//     ~0, // Activate on all layers
-//     MOD_MASK_CAG, // Do not activate when ctrl, alt, or gui are pressed
-//     ko_option_no_reregister_trigger // Specifies that the comma key is not registered again after lifting ctrl
-// );
-
-// // TODO semicolon not done
-// const key_override_t semicolon_key_override = ko_make_with_layers_negmods_and_options(
-//     MOD_MASK_SHIFT, // Trigger modifier: shift
-//     KC_DOT, // Trigger key: comma
-//     S(KC_SCLN), // Replacement key: shifted semicolon
-//     ~0, // Activate on all layers
-//     MOD_MASK_CAG, // Do not activate when ctrl, alt, or gui are pressed
-//     ko_option_no_reregister_trigger // Specifies that the comma key is not registered again after lifting ctrl
-// );
-
-// This globally defines all key overrides to be used
-// const key_override_t **key_overrides = (const key_override_t *[]) {
-//     &comma_key_override,
-//     &dot_key_override,
-//     NULL // Null terminate the array of overrides!
-// };
-
-// uint32_t layer_state_set_user(uint32_t state) {
-//     if (autoshift_enabled && (state & (1<<GAME))) {
-//         autoshift_disable();
-//     } else {
-//         autoshift_enable();
-//     }
-//     return state;
-// };
 
 
 #ifdef ENCODER_ENABLE
