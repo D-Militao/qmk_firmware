@@ -39,34 +39,6 @@ enum sofle_layers {
     FN
 };
 
-// doesn't work try process_unicode
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    #ifdef CONSOLE_ENABLE
-        if (record->event.pressed) {
-            uprintf("0x%04X,%u,%u,%u\n", keycode, record->event.key.row, record->event.key.col, get_highest_layer(layer_state));
-        }
-    #endif
-    switch (keycode) {
-        // case KC_A_ACUT:
-        //     if (record->event.pressed) {
-        //         // Do something when pressed
-        //         if (get_mods() == MOD_MASK_SHIFT) {
-        //             // Shift is being held
-        //             // register_code(A_UC_ACUT);
-        //             register_code(X(A_UC_ACUT));
-        //         } else {
-        //             // Shift is not being held
-        //             // register_code(A_LC_ACUT);
-        //             register_code(X(A_LC_ACUT));
-        //         }
-        //     } else {
-        //         // Do something else when release
-        //     }
-        //     return false;  // Skip all further processing of this key
-        default:
-            return true;  // Process all other keycodes normally
-    }
-}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
