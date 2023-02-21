@@ -82,7 +82,7 @@
 #define _____NUM_L4_____ KC_NO, KC_UNDS, KC_7,  KC_8,  KC_9,  KC_PMNS
 #define _____NUM_L3_____ KC_NO, KC_PAST, KC_4,  KC_5,  KC_6,  KC_PPLS
 #define _____NUM_L2_____ KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL
-#define _____NUM_L1_____ LT(SHORT, KC_DOT), LT(NAV, KC_0), LT(MOU, KC_UNDS)
+#define _____NUM_L1_____ LT(SHORT, KC_COMM), LT(NAV, KC_0), LT(MOU, KC_DOT)
 
 #define _____NUM_R5_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define _____NUM_R4_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
@@ -113,5 +113,5 @@
 #define _____FN_R5_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define _____FN_R4_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define _____FN_R3_____ KC_NO,  KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_NO
-#define _____FN_R2_____ KC_NO,  KC_NO,   KC_COMM, KC_DOT,  KC_NO,   KC_NO
+#define _____FN_R2_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define _____FN_R1_____ KC_TRNS, KC_TRNS, KC_TRNS
