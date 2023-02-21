@@ -54,9 +54,9 @@
 #define _____MOU_L1_____ KC_TRNS, KC_TRNS, KC_TRNS
 
 #define _____MOU_R5_____ KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
-#define _____MOU_R4_____ KC_VOLU, KC_WBAK, KC_MS_U, KC_WFWD, KC_WH_U, KC_NO
-#define _____MOU_R3_____ KC_VOLD, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_NO
-#define _____MOU_R2_____ KC_MPRV, KC_MPLY, KC_MNXT, KC_BRID, KC_BRIU, KC_NO
+#define _____MOU_R4_____ KC_NO,   KC_WBAK, KC_MS_U, KC_WFWD, KC_WH_U, KC_NO
+#define _____MOU_R3_____ KC_NO,   KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, KC_NO
+#define _____MOU_R2_____ U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND, KC_NO
 #define _____MOU_R1_____ KC_BTN1, KC_BTN2, KC_BTN3
 
 // Shortcuts layer
@@ -66,10 +66,10 @@
 #define _____SHORT_L2_____ KC_NO, U_UND,   U_CUT,   U_CPY,    U_PST,   U_RDO
 #define _____SHORT_L1_____ KC_TRNS, KC_TRNS, KC_TRNS
 
-#define _____SHORT_R5_____ KC_NO, KC_NO,           KC_NO,           KC_NO,                  KC_NO, KC_NO
-#define _____SHORT_R4_____ KC_NO, KC_SHOW_DESKTOP, KC_MISSION_CTRL, KC_NOTIFICATION_CENTER, KC_NO, KC_NO
-#define _____SHORT_R3_____ KC_NO, KC_DESKTOP_LEFT, KC_TASK_VIEW,    KC_DESKTOP_RIGHT,       KC_NO, KC_NO
-#define _____SHORT_R2_____ U_RDO, U_PST,           U_CPY,           U_CUT,                  U_UND, KC_NO
+#define _____SHORT_R5_____ KC_NO,   KC_NO,           KC_NO,           KC_NO,                  KC_NO,   KC_NO
+#define _____SHORT_R4_____ KC_VOLU, KC_SHOW_DESKTOP, KC_MISSION_CTRL, KC_NOTIFICATION_CENTER, KC_BRIU, KC_NO
+#define _____SHORT_R3_____ KC_VOLD, KC_DESKTOP_LEFT, KC_TASK_VIEW,    KC_DESKTOP_RIGHT,       KC_BRID, KC_NO
+#define _____SHORT_R2_____ KC_NO,   KC_MPRV,         KC_MPLY,         KC_MNXT,                KC_NO,   KC_NO
 #define _____SHORT_R1_____ KC_TRNS, KC_TRNS, KC_TRNS
 
 
