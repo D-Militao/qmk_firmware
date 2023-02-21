@@ -79,10 +79,10 @@
 
 // Number and symbols (by using shift)
 #define _____NUM_L5_____ KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO
-#define _____NUM_L4_____ KC_NO, KC_PAST, KC_7,  KC_8,  KC_9,  KC_PMNS
-#define _____NUM_L3_____ KC_NO, KC_0,    KC_4,  KC_5,  KC_6,  KC_PPLS
+#define _____NUM_L4_____ KC_NO, KC_UNDS, KC_7,  KC_8,  KC_9,  KC_PMNS
+#define _____NUM_L3_____ KC_NO, KC_PAST, KC_4,  KC_5,  KC_6,  KC_PPLS
 #define _____NUM_L2_____ KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL
-#define _____NUM_L1_____ LT(SHORT, KC_LPRN), LT(NAV, KC_0), LT(MOU, KC_RPRN)
+#define _____NUM_L1_____ LT(SHORT, KC_DOT), LT(NAV, KC_0), LT(MOU, KC_UNDS)
 
 #define _____NUM_R5_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 #define _____NUM_R4_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
