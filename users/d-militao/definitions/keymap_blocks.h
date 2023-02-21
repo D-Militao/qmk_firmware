@@ -20,7 +20,7 @@
 #define _____GAME_L4_____ KC_TAB,  KC_Q, KC_W, KC_E, KC_R, KC_T
 #define _____GAME_L3_____ KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G
 #define _____GAME_L2_____ KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B
-#define _____GAME_L1_____ KC_TAB, KC_SPC, LT(NAV, KC_ESC)
+#define _____GAME_L1_____ KC_ESC, KC_SPC, LT(NAV, KC_TAB)
 
 #define _____GAME_R5_____ KC_6, KC_7, KC_8, KC_9, KC_0, KC_EQL
 #define _____GAME_R4_____ KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC
