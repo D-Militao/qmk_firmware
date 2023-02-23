@@ -79,9 +79,9 @@
 
 // Number and symbols (by using shift)
 #define _____NUM_L5_____ KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO
-#define _____NUM_L4_____ KC_NO, KC_UNDS, KC_7,  KC_8,  KC_9,  KC_PMNS
-#define _____NUM_L3_____ KC_NO, KC_PAST, KC_4,  KC_5,  KC_6,  KC_PPLS
-#define _____NUM_L2_____ KC_NO, KC_SLSH, KC_1,  KC_2,  KC_3,  KC_EQL
+#define _____NUM_L4_____ KC_NO, KC_SLSH, KC_7,  KC_8,  KC_9,  KC_PAST
+#define _____NUM_L3_____ KC_NO, KC_PMNS, KC_4,  KC_5,  KC_6,  KC_UNDS
+#define _____NUM_L2_____ KC_NO, KC_PPLS, KC_1,  KC_2,  KC_3,  KC_EQL
 #define _____NUM_L1_____ LT(SHORT, KC_COMM), LT(NAV, KC_0), LT(MOU, KC_DOT)
 
 #define _____NUM_R5_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
@@ -92,9 +92,9 @@
 
 // Symbol layer (will not include NUM layer symbols that can be accessed with shift)
 #define _____SYM_L5_____ KC_NO, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
-#define _____SYM_L4_____ KC_NO, KC_GRV,  KC_TILD, KC_LCBR, KC_RCBR, KC_NO
-#define _____SYM_L3_____ KC_NO, KC_LABK, KC_RABK, KC_LPRN, KC_RPRN, KC_NO
-#define _____SYM_L2_____ KC_NO, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC, KC_NO
+#define _____SYM_L4_____ KC_NO, KC_NO, KC_GRV,  KC_TILD, KC_LCBR, KC_RCBR
+#define _____SYM_L3_____ KC_NO, KC_NO, KC_LABK, KC_RABK, KC_LPRN, KC_RPRN
+#define _____SYM_L2_____ KC_NO, KC_NO, KC_BSLS, KC_PIPE, KC_LBRC, KC_RBRC
 #define _____SYM_L1_____ KC_TRNS, KC_TRNS, KC_TRNS
 
 #define _____SYM_R5_____ KC_NO,  KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
